@@ -43,4 +43,15 @@ func main() {
 	structs.PrintStruct()
 	structs.SimpleType()
 	structs.StructType()
+	rec := &structs.Record{Name: "John"}
+	println("before change: ", rec.Name)
+	structs.ChangeName(rec)
+	println("main: ", rec.Name)
+	fmt.Println("\n- Constructors")
+	person, error := structs.NewPerson("Dalila", 32)
+	fmt.Println(person, error)
+	person2, error2 := structs.NewPerson("", 100)
+	fmt.Println(person2, error2)
+
+	fmt.Println("\n\n::: Interfaces :::")
 }

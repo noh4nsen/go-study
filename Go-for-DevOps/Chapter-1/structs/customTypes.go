@@ -24,6 +24,10 @@ func (r *Record) String() string {
 	return fmt.Sprintf("%s, %d", r.Name, r.Age)
 }
 
+func (r *Record) IncrAge() {
+	r.Age++
+}
+
 func StructType() {
 	david := Record{Name: "David Justice", Age: 28}
 	sarah := Record{Name: "Sarah Murphy", Age: 29}
@@ -36,4 +40,15 @@ func StructType() {
 
 	david.Name = "Testing value change"
 	fmt.Println(david.String())
+
+	david.IncrAge()
+	david.IncrAge()
+	fmt.Println(david.String())
+
+	PrintStruct()
+}
+
+func ChangeName(r *Record) {
+	r.Name = "Peter"
+	fmt.Println("inside ChangeName: ", r.Name)
 }
