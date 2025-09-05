@@ -1,1 +1,0 @@
-https://softchris.github.io/golang-book/
