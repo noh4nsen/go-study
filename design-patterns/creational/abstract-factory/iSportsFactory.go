@@ -14,5 +14,5 @@ func GetSportsFactory(brand string) (ISportsFactory, error) {
 	if brand == "nike" {
 		return &Nike{}, nil
 	}
-	return nil, fmt.Errorf("Brand %s not supported", brand)
+	return nil, fmt.Errorf("brand %s not supported", brand)
 }

@@ -10,5 +10,5 @@ func getGun(gunType string) (IGun, error) {
 		return newMusket(), nil
 	}
 
-	return nil, fmt.Errorf("Gun type %s not supported", gunType)
+	return nil, fmt.Errorf("gun type %s not supported", gunType)
 }
